@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  font-family: "Georgia", serif; /* A nice default serif */
+  color: #5d4037; /* Earthy brown, adjust as needed */
+  background-color: #fff8f0; /* Creamy background */
+}
+
+.font-script {
+  font-family: "Sacramento", cursive; /* For names or special headings */
+}
+
+.font-display {
+  font-family: "Playfair Display", serif; /* For main headings */
+}
