@@ -3,10 +3,7 @@
 import Head from "next/head";
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
-import {
-  getGuestBySlug,
-  Guest,
-} from "../../lib/guestUtils";
+import { getGuestBySlug, Guest } from "../../lib/guestUtils";
 import MainLayout from "../../components/layout/MainLayout";
 import Hero from "../../components/Hero";
 

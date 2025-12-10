@@ -46,21 +46,20 @@ const newWeddingSchedule: NewDaySchedule[] = [
   {
     dateKhmer: "កម្មវិធីថ្ងៃទី២ ថ្ងៃសៅរ៍ ទី០៣ ខែមករា ឆ្នាំ២០២៦",
     items: [
-      { time: "06:30 ព្រឹក", event: "ជួបជុំភ្ញៀវកិត្តិយសដើម្បីរៀបចំហែរណាំមុន" },
+      { time: "06:30 ព្រឹក", event: "ជួបជុំភ្ញៀវកិត្តិយសដើម្បីរៀបចំហែរជំនួន" },
       {
         time: "07:00 ព្រឹក",
         event:
-          "ពិធីហែរជើនខានកំណាត់ចូលរោងជ័យ និយាយដើរការ រួបរាប់ផ្កែឈើ និងពិសាអាហារដ្ឋានាហារពេលព្រឹក",
+          "ពិធីហែរជំនួនកំណាត់ចូលរោងជ័យ និយាយជើងការ រៀបរាប់ផ្លែឈើ និងពិសាអាហារពេលព្រឹក",
       },
-      { time: "08:30 ព្រឹក", event: "ពិធីបាត់ចិញ្ច្រៀន" },
+      { time: "08:30 ព្រឹក", event: "ពិធីបំពាក់ចិញ្ចៀន" },
       {
         time: "09:30 ព្រឹក",
-        event:
-          "ពិធីកាត់សក់បង្គក់ស្រី កូនប្រុស-កូនស្រី ចត្រុបង្គុំបង្គុំគ្រូសារ",
+        event: "ពិធីកាត់សក់បង្គក់សិរី កូនប្រុស-កូនស្រី ថតរូបជួបជុំគ្រួសារ",
       },
       {
         time: "11:00 ព្រឹក",
-        event: "ពិធីសំពះភ្លើមចង់ដៃ បង្វិលពពិល និង ព្រះចៅងគោងស្បែ",
+        event: "ពិធីសំពះផ្ទឹមចងដៃ បង្វិលពពិល និង ព្រះថោងតោងស្បៃ",
       },
       {
         time: "12:00 ថ្ងៃត្រង់",
@@ -69,7 +68,7 @@ const newWeddingSchedule: NewDaySchedule[] = [
       {
         time: "05:00 ល្ងាច",
         event:
-          "អញ្ជើញភ្ញៀវកិត្តិយសពិសាអាហារដ្ឋានាហារ នៅ ភេទ្ឋានខាងស្រី ដោយមេត្រីភាព ៗ សូមអរគុណ !",
+          "អញ្ជើញភ្ញៀវកិត្តិយសពិសាអាហារនៅ គេហដ្ធានខាងស្រីដោយមេត្រីភាព។ សូមអរគុណ !",
       },
     ],
   },
@@ -78,7 +77,7 @@ const newWeddingSchedule: NewDaySchedule[] = [
 const WeddingInvitation: React.FC<WeddingInvitationProps> = ({
   groomName = "សិទ្ធ សុធារិទ្ធ",
   brideName = "ឡាយ សៀវអុីញ",
-  mapEmbedUrl = "https://maps.app.goo.gl/yYwDiBXqK9RCs4uk8",
+  mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d15638.000329745311!2d104.81044285!3d11.51594065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2skh!4v1765382330032!5m2!1sen!2skh",
   groomImage = "/groom.png",
   brideImage = "/bride.png",
   groomParents = { father: "លោក អុឹម គឹមសាន", mother: "លោកស្រី ចិនសុផល" },
@@ -251,9 +250,9 @@ const WeddingInvitation: React.FC<WeddingInvitationProps> = ({
           <div className="px-8 pb-8 text-center space-y-4 battambang-font">
             <div className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl p-6 shadow-lg border-2 border-amber-200">
               <p className="text-base lg:text-md text-[#6B7B5E] leading-relaxed">
-                ថ្ងៃទី០៣ ខែមករា ឆ្នាំ២០២៦ ម៉ោង ៥:០០ រសៀល
+                ថ្ងៃសៅរ៍ទី០៣ ខែមករា ឆ្នាំ២០២៦ ម៉ោង ៥:០០ រសៀល
                 <br />
-                ស្ថិតនៅគេហដ្ធានខាងស្រី ភូមិព្រែកហូរកើត១ សង្កាត់ព្រែកហូ
+                ស្ថិតនៅគេហដ្ធានខាងស្រី ភូមិព្រែកហូរកើត១ សង្កាត់ព្រែកហូរ
                 ក្រុងតាខ្មៅ ខេត្តកណ្តាល
               </p>
             </div>
@@ -422,11 +421,17 @@ const WeddingInvitation: React.FC<WeddingInvitationProps> = ({
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg border-4 border-amber-200">
               <div className="aspect-video bg-gray-200 relative">
                 {mapEmbedUrl ? (
+                  // <iframe
+                  //   src={mapEmbedUrl}
+                  //   className="w-full h-full"
+                  //   loading="lazy"
+                  // />
                   <iframe
-                    src={mapEmbedUrl}
-                    className="w-full h-full"
+                    src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d7821.032516917225!2d104.942002!3d11.442615!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDI2JzMzLjQiTiAxMDTCsDU2JzMxLjIiRQ!5e0!3m2!1skm!2skh!4v1765382502645!5m2!1skm!2skh"
+                    width="600"
+                    height="450"
                     loading="lazy"
-                  />
+                  ></iframe>
                 ) : (
                   <div className="flex items-center justify-center h-full text-gray-400">
                     <MapPin className="w-12 h-12" />
