@@ -78,12 +78,11 @@ const newWeddingSchedule: NewDaySchedule[] = [
 const WeddingInvitation: React.FC<WeddingInvitationProps> = ({
   groomName = "សិទ្ធ សុធារិទ្ធ",
   brideName = "ឡាយ សៀវអុីញ",
-  mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3909.013909342136!2d103.85330807585816!3d13.33019438701768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDE5JzQ4LjciTiAxMDPCsDUxJzIxLjIiRQ!5e0!3m2!1sen!2skh!4v1716348888888!5m2!1sen!2skh",
+  mapEmbedUrl = "https://maps.app.goo.gl/yYwDiBXqK9RCs4uk8",
   groomImage = "/groom.png",
   brideImage = "/bride.png",
   groomParents = { father: "លោក អុឹម គឹមសាន", mother: "លោកស្រី ចិនសុផល" },
   brideParents = { father: "លោក ណុប ប៊ុនលី", mother: "លោកស្រី គួច ងិងណៃ" },
-  paymentQRs = { aba: "", acleda: "" },
 }) => {
   const [activeDay, setActiveDay] = useState(1);
 
@@ -252,7 +251,7 @@ const WeddingInvitation: React.FC<WeddingInvitationProps> = ({
           <div className="px-8 pb-8 text-center space-y-4 battambang-font">
             <div className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl p-6 shadow-lg border-2 border-amber-200">
               <p className="text-base lg:text-md text-[#6B7B5E] leading-relaxed">
-                ថ្ងៃទី៣០ ខែមករា ឆ្នាំ២០២៦ ម៉ោង ៥:០០ រសៀល
+                ថ្ងៃទី០៣ ខែមករា ឆ្នាំ២០២៦ ម៉ោង ៥:០០ រសៀល
                 <br />
                 ស្ថិតនៅគេហដ្ធានខាងស្រី ភូមិព្រែកហូរកើត១ សង្កាត់ព្រែកហូ
                 ក្រុងតាខ្មៅ ខេត្តកណ្តាល
@@ -441,44 +440,19 @@ const WeddingInvitation: React.FC<WeddingInvitationProps> = ({
           <div className="px-8 py-6">
             <div className="text-center mb-4 battambang-font">
               <h3 className="text-xl font-bold text-gray-800 flex items-center justify-center gap-2">
-                គណនីចូលរួម😊
+                គណនីរួមជាមួយប្រពន្ធសំណប់ចិត្ត😊
               </h3>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              {/* ABA */}
-              <div className="bg-white rounded-xl p-4 shadow-lg border-2 border-amber-200">
-                <p className="text-center font-bold text-gray-700 mb-2">ABA</p>
-                <div className="aspect-square bg-gradient-to-br from-red-50 to-red-100 rounded-lg flex items-center justify-center">
-                  {paymentQRs.aba ? (
-                    <Image
-                      src={paymentQRs.aba}
-                      alt="ABA QR"
-                      width={200}
-                      height={200}
-                      className="w-full h-full object-contain"
-                    />
-                  ) : (
-                    <div className="text-6xl">💳</div>
-                  )}
-                </div>
-              </div>
-              {/* ACLEDA */}
-              <div className="bg-white rounded-xl p-4 shadow-lg border-2 border-emerald-200">
-                <p className="text-center font-bold text-gray-700 mb-2">
-                  ACLEDA
-                </p>
-                <div className="aspect-square bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg flex items-center justify-center">
-                  {paymentQRs.acleda ? (
-                    <Image
-                      src={paymentQRs.acleda}
-                      alt="ACLEDA QR"
-                      width={200}
-                      height={200}
-                      className="w-full h-full object-contain"
-                    />
-                  ) : (
-                    <div className="text-6xl">💳</div>
-                  )}
+            <div className="flex justify-center">
+              <div className="bg-white rounded-xl p-4 shadow-lg border-2 border-amber-200 max-w-md w-full">
+                <div className="aspect-square bg-gradient-to-br from-red-50 to-red-100 rounded-lg flex items-center justify-center overflow-hidden">
+                  <Image
+                    src="/aba.jpg"
+                    alt="Payment QR"
+                    width={400}
+                    height={400}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
               </div>
             </div>

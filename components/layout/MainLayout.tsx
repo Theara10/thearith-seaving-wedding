@@ -13,7 +13,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
 
       <main>{children}</main>
       <footer className="text-center py-8 text-sm text-brand-primary">
-        <p>Made with love by [Your Names]</p>
+        <p>Thearith & Seaving </p>
         <p>&copy; {new Date().getFullYear()}</p>
       </footer>
     </div>
